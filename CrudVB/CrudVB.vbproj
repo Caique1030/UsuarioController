@@ -174,8 +174,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.vb" />
-    <Compile Include="Controllers\AutenticacaoController.vb" />
-    <Compile Include="Controllers\DaschboardController.vb" />
+    <Compile Include="Controllers\GerenciadorController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
@@ -232,15 +231,15 @@
     <Content Include="packages.config" />
     <Content Include="Views\_ViewStart.vbhtml" />
     <Content Include="Views\Shared\_Layout.vbhtml" />
-    <Content Include="Views\Daschboard\index.vbhtml" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\home\about.vbhtml" />
     <Content Include="Views\home\contact.vbhtml" />
     <Content Include="Views\home\index.vbhtml" />
-    <Content Include="Views\Autenticacaos\login.vbhtml" />
-    <Content Include="Views\Autenticacaos\registrar.vbhtml" />
-    <Content Include="Views\Autenticacaos\editar.vbhtml" />
-    <Content Include="Views\Autenticacaos\deletar.vbhtml" />
+    <Content Include="Views\Gerenciador\Login.vbhtml" />
+    <Content Include="Views\Gerenciador\Registrar.vbhtml" />
+    <Content Include="Views\Gerenciador\Editar.vbhtml" />
+    <Content Include="Views\Gerenciador\Deletar.vbhtml" />
+    <Content Include="Views\Gerenciador\Index.vbhtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -3,7 +3,7 @@
 Public Class Autenticacao
     <Key>
     Public Property Id As Integer
-    Public Property Nome As String
+
     <Required(ErrorMessage:="O campo Email é obrigatório.")>
     <EmailAddress(ErrorMessage:="O Email não é válido.")>
     <Display(Name:="Email")>
@@ -14,6 +14,5 @@ Public Class Autenticacao
     <DataType(DataType.Password)>
     <Display(Name:="Senha")>
     Public Property Senha As String
+    Public Property Nome As String
 End Class
-
-

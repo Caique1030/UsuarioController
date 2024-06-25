@@ -1,4 +1,4 @@
-﻿@ModelType CrudVB.Autenticacao
+﻿@ModelType CrudVB.Usuario
 
 <!DOCTYPE html>
 <html>
@@ -19,15 +19,16 @@
             </div>
             <div class="panel-body">
                 <p><strong>Email:</strong> @Model.Email</p>
-                
+                <!-- Adicione mais detalhes do usuário aqui, se necessário -->
             </div>
         </div>
         <div>
-            <a href="@Url.Action("Editar", "Autenticacaos", New With {.id = Model.Id})" class="btn btn-primary">Editar</a>
-            <a href="@Url.Action("Deletar", "Autenticacaos", New With {.id = Model.Id})" class="btn btn-danger">Deletar</a>
+            <a href="@Url.Action("Edit", New With {.id = Model.Id})" class="btn btn-primary">Editar</a> |
+            <a href="@Url.Action("Delete", New With {.id = Model.Id})" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir sua conta?')">Excluir</a>
         </div>
     </div>
     <script src="~/Scripts/jquery-3.6.0.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
+

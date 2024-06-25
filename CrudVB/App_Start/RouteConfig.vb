@@ -12,7 +12,18 @@ Public Module RouteConfig
         routes.MapRoute(
             name:="Default",
             url:="{controller}/{action}/{id}",
-            defaults:=New With {.controller = "home", .action = "index", .id = UrlParameter.Optional}
+            defaults:=New With {.controller = "Home", .action = "Index", .id = UrlParameter.Optional}
+        )
+
+        routes.MapRoute(
+            name:="Autenticacao",
+            url:="Autenticacao/{action}/{id}",
+            defaults:=New With {.controller = "Gerenciador", .action = "Login", .id = UrlParameter.Optional}
+        )
+        routes.MapRoute(
+            name:="GerenciadorIndex",
+            url:="Gerenciador/Index",
+            defaults:=New With {.controller = "Gerenciador", .action = "Index"}
         )
     End Sub
 End Module
