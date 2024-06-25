@@ -1,5 +1,18 @@
 # CrudVB Caique Junior Da Silva
-Projeto criado para que o usuario possa se cadastrar, fazer login , editar suas informações e exclui-las
+Projeto criado para que o usuario possa se cadastrar, fazer login , editar suas informações e exclui-las.
+
+## Frameworks Utilizados
+
+Este projeto utiliza os seguintes frameworks e tecnologias:
+
+- **ASP.NET MVC 5**: Utilizado para estruturação da aplicação web e controle de rotas.
+- **Entity Framework 6**: ORM utilizado para acesso e manipulação de dados com o SQL Server.
+- **Bootstrap 4**: Framework de front-end para estilização e responsividade da interface do usuário.
+- **jQuery**: Biblioteca JavaScript utilizada para interações dinâmicas na interface do usuário.
+- **NuGet Packages**: Lista dos principais pacotes NuGet utilizados, como `EntityFramework`, `Bootstrap`, entre outros.
+
+Para mais detalhes sobre cada um desses frameworks, consulte a documentação oficial nos links fornecidos.
+
 ## Requisitos de Instalação
 
 Para utilizar este projeto, é necessário ter os seguintes softwares instalados:
