@@ -15,7 +15,7 @@
     <div class="container">
         <h2>Registre-se</h2>
 
-        @* Formulário de registro *@
+
         @Html.BeginForm("Registrar", "Gerenciador", FormMethod.Post, New With {.class = "form-horizontal", .role = "form"})
         @Html.AntiForgeryToken()
 

@@ -6,7 +6,6 @@ End Code
     <div class="jumbotron">
         <h1>Bem Vindo ao Crud!</h1>
         <p class="lead">Este projeto visa em criar novos usuarios , com a possibilidade de Editar, Excluir seu cadastro.</p>
-        @* Utilizando ActionLink para criar um link para a página de login *@
         <a href="@Url.Action("login", "Gerenciador")" class="btn btn-primary">Ir para Login</a>
     </div>
 </div>

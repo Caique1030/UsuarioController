@@ -19,7 +19,7 @@
             </div>
             <div class="panel-body">
                 <p><strong>Email:</strong> @Model.Email</p>
-                <!-- Adicione mais detalhes do usuário aqui, se necessário -->
+      
             </div>
         </div>
         <div>
