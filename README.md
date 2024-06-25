@@ -17,7 +17,7 @@ Para mais detalhes sobre cada um desses frameworks, consulte a documentação of
 
 Para utilizar este projeto, é necessário ter os seguintes softwares instalados:
 
-- [Visual Studio 2015]([link_para_download](https://my.visualstudio.com/Downloads?q=visual%20studio%202015&wt.mc_id=o~msft~vscom~older-downloads))
+- [Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015&wt.mc_id=o~msft~vscom~older-downloads)
 - [SQL Server 2019](https://www.microsoft.com/pt-br/sql-server/sql-server-2019)
 
 ## Configuração
