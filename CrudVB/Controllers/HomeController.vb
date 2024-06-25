@@ -3,19 +3,21 @@
 Public Class HomeController
     Inherits Controller
 
-    Function Index() As ActionResult
+    Function index() As ActionResult
         Return View()
     End Function
 
-    Function About() As ActionResult
-        ViewData("Message") = "Your application description page."
+    Function about() As ActionResult
+        ViewData("Message") = "Uma breve descrição sobre mim."
 
         Return View()
     End Function
 
-    Function Contact() As ActionResult
-        ViewData("Message") = "Your contact page."
+    Function contact() As ActionResult
+        ViewData("Message") = "Meus contatos."
 
         Return View()
     End Function
+
+
 End Class

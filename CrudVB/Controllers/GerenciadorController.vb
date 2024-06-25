@@ -31,8 +31,11 @@ Namespace Controllers
                     ModelState.AddModelError("", "Email ou senha inválidos.")
                 End If
             End If
+
+            ' Se houver erros de validação ou autenticação, retorna para a view com o modelo de autenticação
             Return View(autenticacao)
         End Function
+
 
         ' GET: Gerenciador/Registrar
         Function Registrar() As ActionResult
@@ -43,6 +46,12 @@ Namespace Controllers
         <HttpPost()>
         <ValidateAntiForgeryToken()>
         Function Registrar(ByVal usuario As Usuario) As ActionResult
+            ' Verifica se o email já está cadastrado
+            Dim usuarioExistente = db.Usuarios.FirstOrDefault(Function(u) u.Email = usuario.Email)
+            If usuarioExistente IsNot Nothing Then
+                ModelState.AddModelError("Email", "Este email já está cadastrado.")
+            End If
+
             If ModelState.IsValid Then
                 ' Adiciona o novo usuário ao contexto do Entity Framework
                 db.Usuarios.Add(usuario)
@@ -50,17 +59,18 @@ Namespace Controllers
 
                 ' Redireciona para a página desejada após o registro bem-sucedido
                 FormsAuthentication.SetAuthCookie(usuario.Id.ToString(), False)
-                Return RedirectToAction("Index")
+                Return RedirectToAction("index", "Gerenciador")
             End If
 
             ' Se houver erros de validação, retorna para a view com o modelo de usuário
             Return View(usuario)
         End Function
 
+
         <Authorize>
         Function Logout() As ActionResult
             FormsAuthentication.SignOut()
-            Return RedirectToAction("Login")
+            Return RedirectToAction("index", "Home")
         End Function
 
         ' GET: Gerenciador/Editar/5
@@ -180,4 +190,6 @@ Namespace Controllers
             MyBase.Dispose(disposing)
         End Sub
     End Class
+
+
 End Namespace

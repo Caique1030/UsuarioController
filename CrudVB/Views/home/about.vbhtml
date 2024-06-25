@@ -1,5 +1,5 @@
 ﻿@Code
-    ViewData("Title") = "About"
+    ViewData("Title") = "Sobre Mim"
 End Code
 
 <h2>@ViewData("Title").</h2>
@@ -19,4 +19,4 @@ Meu objetivo atual é ingressar no campo de desenvolvimento back-end. Estou ativ
 </p>
 Estou entusiasmado para colaborar em projetos desafiadores e continuar expandindo meu conhecimento na área de tecnologia. Se você está procurando um desenvolvedor dedicado, motivado e apaixonado, estou pronto para contribuir. Vamos conectar e explorar oportunidades juntos!
 
-<p> : https://github.com/Caique1030 </p>
+<p> https://github.com/Caique1030 </p>

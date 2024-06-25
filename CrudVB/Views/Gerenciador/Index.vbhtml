@@ -25,7 +25,6 @@
         <div>
             <a href="@Url.Action("Editar", New With {.id = Model.Id})" class="btn btn-primary">Editar</a> |
             <a href="@Url.Action("Deletar", New With {.id = Model.Id})" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir sua conta?')">Excluir</a> |
-            @Html.ActionLink("Logout", "Logout", "Gerenciador", Nothing, New With {.class = "btn btn-default"})
         </div>
     </div>
     <script src="~/Scripts/jquery-3.6.0.min.js"></script>
