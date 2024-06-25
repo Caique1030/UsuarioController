@@ -5,51 +5,55 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar - My ASP.NET Application</title>
+    <title>Registrar</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+
 </head>
 <body>
     <div class="container">
-        <h2>Registrar</h2>
+        <h2>Registre-se</h2>
 
         @* Formulário de registro *@
-            @Html.BeginForm("Registrar", "Gerenciador", FormMethod.Post, New With {.class = "form-horizontal", .role = "form"})
-            @Html.AntiForgeryToken()
+        @Html.BeginForm("Registrar", "Gerenciador", FormMethod.Post, New With {.class = "form-horizontal", .role = "form"})
+        @Html.AntiForgeryToken()
 
         <div Class="form-group">
-                @Html.LabelFor(Function(model) model.Nome, htmlAttributes:=New With {.class = "col-md-2 control-label"})
-                <div Class="col-md-10">
+            @Html.LabelFor(Function(model) model.Nome, htmlAttributes:=New With {.class = "col-md-2 control-label"})
+            <div Class="col-md-10">
                 @Html.TextBoxFor(Function(model) model.Nome, New With {.class = "form-control"})
                 @Html.ValidationMessageFor(Function(model) model.Nome, "", New With {.class = "text-danger"})
-                </div>
             </div>
+        </div>
 
-            <div Class="form-group">
-                @Html.LabelFor(Function(model) model.Email, htmlAttributes:=New With {.class = "col-md-2 control-label"})
-                <div Class="col-md-10">
+        <div Class="form-group">
+            @Html.LabelFor(Function(model) model.Email, htmlAttributes:=New With {.class = "col-md-2 control-label"})
+            <div Class="col-md-10">
                 @Html.TextBoxFor(Function(model) model.Email, New With {.class = "form-control"})
                 @Html.ValidationMessageFor(Function(model) model.Email, "", New With {.class = "text-danger"})
-                </div>
             </div>
+        </div>
 
-            <div Class="form-group">
-                @Html.LabelFor(Function(model) model.Senha, htmlAttributes:=New With {.class = "col-md-2 control-label"})
-                <div Class="col-md-10">
-                @Html.PasswordFor(Function(model) model.Senha, New With {.class = "form-control"})
+        <div Class="form-group password-container">
+            @Html.LabelFor(Function(model) model.Senha, htmlAttributes:=New With {.class = "col-md-2 control-label"})
+            <div Class="col-md-10">
+                @Html.PasswordFor(Function(model) model.Senha, New With {.class = "form-control", .id = "senha"})
+                <span class="toggle-password" onclick="togglePassword()">👁️</span>
                 @Html.ValidationMessageFor(Function(model) model.Senha, "", New With {.class = "text-danger"})
-                </div>
             </div>
+        </div>
 
-            <div Class="form-group">
-                <div Class="col-md-offset-2 col-md-10">
-                    <Button type = "submit" Class="btn btn-default">Registrar</button>
-                </div>
+        <div Class="form-group">
+            <div Class="col-md-offset-2 col-md-10">
+                <button type="submit" Class="btn btn-default">Registrar</button>
             </div>
+        </div>
 
+      
     </div>
     <script src="~/Scripts/jquery-3.6.0.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/togglePassword.js"></script>
 </body>
 </html>

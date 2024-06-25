@@ -18,7 +18,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Sistema de Autenticação de Usuários com ASP.NET MVC", "Index", "Home", New With {.area = ""}, New With {.class = "navbar-brand"})
+                @Html.ActionLink("Sistema de Usuarios", "index", "home", New With {.area = ""}, New With {.class = "navbar-brand"})
+                @Html.ActionLink("Contato", "contact", "home", New With {.area = ""}, New With {.class = "navbar-brand"})
+                @Html.ActionLink("Sobre", "about", "Gerenciador", New With {.area = ""}, New With {.class = "navbar-brand"})
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -31,7 +33,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Caique Junior Da Silva</p>
         </footer>
     </div>
 

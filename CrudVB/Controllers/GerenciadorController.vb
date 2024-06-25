@@ -12,7 +12,7 @@ Namespace Controllers
 
         ' GET: Gerenciador/Login
         Function Login() As ActionResult
-            Return View(New Autenticacao()) ' Retorna um objeto do tipo Autenticacao para a view Login
+            Return View() ' Retorna um objeto do tipo Autenticacao para a view Login
         End Function
 
         ' POST: Gerenciador/Login
@@ -26,7 +26,7 @@ Namespace Controllers
                 If usuarioAutenticado IsNot Nothing Then
                     ' Define o cookie de autenticação com o ID do usuário
                     FormsAuthentication.SetAuthCookie(usuarioAutenticado.Id.ToString(), False)
-                    Return RedirectToAction("Index")
+                    Return RedirectToAction("Index", "Gerenciador")
                 Else
                     ModelState.AddModelError("", "Email ou senha inválidos.")
                 End If
@@ -55,6 +55,12 @@ Namespace Controllers
 
             ' Se houver erros de validação, retorna para a view com o modelo de usuário
             Return View(usuario)
+        End Function
+
+        <Authorize>
+        Function Logout() As ActionResult
+            FormsAuthentication.SignOut()
+            Return RedirectToAction("Login")
         End Function
 
         ' GET: Gerenciador/Editar/5

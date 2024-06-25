@@ -5,9 +5,10 @@ End Code
 <div class="container">
     <div class="jumbotron">
         <h1>Bem Vindo Usuário!</h1>
+        <p>Este projeto visa em criar novos usuarios , com a possibilidade de Editar, Excluir seu cadastro.</p>
         <p class="lead"></p>
         @* Utilizando ActionLink para criar um link para a página de login *@
-        <p>@Html.ActionLink("Entrar", "Login", "Gerenciador", Nothing, New With {.class = "btn btn-primary btn-lg"})</p>
+        <a href="@Url.Action("Login", "Gerenciador")" class="btn btn-primary">Ir para Login</a>
     </div>
 </div>
 

@@ -1,4 +1,4 @@
-﻿@ModelType CrudVB.Autenticacao
+﻿@ModelType CrudVB.Usuario
 
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,7 @@
             @Html.AntiForgeryToken()
         <div Class="form-group">
                 <input type = "submit" value="Excluir" Class="btn btn-danger" />
-                @Html.ActionLink("Cancelar", "Index", "Dashboard", Nothing, New With {.class = "btn btn-default"})
+                @Html.ActionLink("Cancelar", "Index", "Gerenciador", Nothing, New With {.class = "btn btn-default"})
             </div>
       
     </div>

@@ -16,3 +16,24 @@ textarea {
     max-width: 280px;
 }
 
+.password-container {
+    position: relative;
+}
+
+.password-container .form-control {
+    padding-right: 30px; /* add some padding to make room for the icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+}
+
+
+
+

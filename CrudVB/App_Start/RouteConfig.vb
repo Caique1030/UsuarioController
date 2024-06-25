@@ -14,12 +14,11 @@ Public Module RouteConfig
             url:="{controller}/{action}/{id}",
             defaults:=New With {.controller = "Home", .action = "Index", .id = UrlParameter.Optional}
         )
-
         routes.MapRoute(
-            name:="Autenticacao",
-            url:="Autenticacao/{action}/{id}",
-            defaults:=New With {.controller = "Gerenciador", .action = "Login", .id = UrlParameter.Optional}
-        )
+                   name:="Autenticacao",
+                   url:="Autenticacao/{action}/{id}",
+                   defaults:=New With {.controller = "Gerenciador", .action = "Login", .id = UrlParameter.Optional}
+               )
         routes.MapRoute(
             name:="GerenciadorIndex",
             url:="Gerenciador/Index",
